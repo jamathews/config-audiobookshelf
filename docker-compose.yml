@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    ports:
+      - 13378:80
+    volumes:
+      - /opt/audiobookshelf/audiobooks:/audiobooks
+      - /opt/audiobookshelf/podcasts:/podcasts
+      - /opt/audiobookshelf/config:/config
+      - /opt/audiobookshelf/metadata:/metadata
+      - /mnt/socrates/eBooks:/eBooks:ro
+
